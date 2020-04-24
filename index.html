@@ -1,0 +1,31 @@
+<html>
+<head>网页内容逐步变灰</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<body>
+
+<img style=" -webkit-filter: grayscale(100%);" src="17630702.jpg"></img>
+<script>
+var int;
+var vue=100;
+function  change(){
+if(vue>0){
+
+vue=vue-1;
+$('img').attr("style","-webkit-filter: grayscale("+vue+"%);");
+}
+else{
+clearInterval(int);
+}
+}
+
+$('img').click(function(){
+
+int=self.setInterval("change()",100);
+
+  
+ 
+})
+
+</script>
+</body>
+</html>
